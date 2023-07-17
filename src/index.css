@@ -26,7 +26,7 @@ code {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #fdba2c;
+  background-color: red;
 }
 .bar {
   content: "";
@@ -42,11 +42,11 @@ code {
   animation: loading 3s linear infinite;
 }
 .bar:nth-child(2) {
-  background-color: #3b78e7;
+  background-color: #e7553b;
   animation: loading 3s linear 1s infinite;
 }
 .bar:nth-child(3) {
-  background-color: #fdba2c;
+  background-color: #bd0d00;
   animation: loading 3s linear 2s infinite;
 }
 @keyframes loading {
