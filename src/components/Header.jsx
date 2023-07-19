@@ -35,7 +35,7 @@ function Header() {
   const { pathname } = useLocation();
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 border md:px-5 bg-white dark:bg-black">
+    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4  md:px-5 bg-white dark:bg-black">
       {loading && <Loader />}
       <div className="flex h-5 items-center">
         {pageName !== "video" && (
@@ -55,7 +55,7 @@ function Header() {
           <img src={logo} alt="youtube" className="h-6  md:hidden" />
         </Link>
       </div>
-      <div className="group flex  items-center">
+      <div className="group flex  items-center mb-1">
         <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border border-[#585858] rounded-l-3xl  group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0">
           <div className="w-10 items-center justify-center hidden group-focus-within:md:flex">
             <IoIosSearch className="text-black dark:text-white text-2xl" />
