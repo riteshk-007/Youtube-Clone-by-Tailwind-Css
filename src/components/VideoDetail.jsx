@@ -6,7 +6,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { abbreviateNumber } from "js-abbreviation-number";
 
 import { fetchDataFromApi } from "../utils/Api";
-import { Context } from "../context/ContextApi";
+import { Context } from "../context/contextApi";
 import SuggestionVideoCard from "./SuggestionVideoCard";
 
 function VideoDetail() {

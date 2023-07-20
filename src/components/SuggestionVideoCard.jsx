@@ -3,13 +3,13 @@ import { abbreviateNumber } from "js-abbreviation-number";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-import VideoLength from "../shared/videoLength";
+import VideoLength from "../shared/VideoLength";
 
 const SuggestionVideoCard = ({ video }) => {
   return (
     <Link to={`/video/${video?.videoId}`}>
-      <div className="flex mb-3">
-        <div className="relative h-24 lg:h-20 xl:h-24 w-40 min-w-[168px] lg:w-32 lg:min-w-[128px] xl:w-40 xl:min-w-[168px] rounded-xl bg-slate-800 overflow-hidden">
+      <div className="mb-3 flex flex-col md:flex-row items-start">
+        <div className="relative h-56 md:h-24 lg:h-20 xl:h-24 w-full md:w-40 min-w-[168px] lg:w-32 lg:min-w-[128px] xl:w-40 xl:min-w-[168px] rounded-xl bg-slate-800 overflow-hidden">
           <img
             className="h-full w-full object-cover"
             src={video?.thumbnails[0]?.url}
@@ -17,7 +17,7 @@ const SuggestionVideoCard = ({ video }) => {
           {video?.lengthSeconds && <VideoLength time={video?.lengthSeconds} />}
         </div>
         <div className="flex flex-col ml-3 overflow-hidden">
-          <span className="text-sm lg:text-xs xl:text-sm font-semibold line-clamp-2 text-black dark:text-white">
+          <span className="text-md lg:text-xs xl:text-sm font-semibold line-clamp-2 text-black dark:text-white">
             {video?.title}
           </span>
           <span className="text-[12px] lg:text-[10px] xl:text-[12px] font-semibold mt-2 text-black/[0.7] dark:text-white/[0.7] flex items-center">
