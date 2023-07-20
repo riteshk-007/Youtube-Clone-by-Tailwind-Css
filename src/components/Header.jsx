@@ -11,7 +11,7 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { FiBell } from "react-icons/fi";
 import { CgClose } from "react-icons/cg";
 
-import { Context } from "../context/contextApi";
+import { Context } from "../context/ContextApi";
 import Loader from "../shared/loader";
 
 const Header = () => {
