@@ -9,6 +9,7 @@ const Feed = () => {
 
   useEffect(() => {
     document.getElementById("root").classList.remove("custom-h");
+    window.scrollTo(0, 0);
   }, []);
 
   return (

@@ -19,6 +19,7 @@ function VideoDetail() {
     document.getElementById("root").classList.add("custom-h");
     fetchVideoDetails();
     fetchRelatedVideos();
+    window.scrollTo(0, 0);
   }, [id]);
 
   const fetchVideoDetails = () => {

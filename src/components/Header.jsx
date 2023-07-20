@@ -38,13 +38,13 @@ const Header = () => {
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
   return (
-    <div className="sticky top-0 z-50 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
+    <div className="sticky top-0 z-20 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
       {loading && <Loader />}
 
       <div className="flex h-5 items-center">
         {pageName !== "video" && (
           <div
-            className="flex md:hidden md:mr-6 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#8888]/[0.6]"
+            className="flex md:hidden md:mr-6 mr-4 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#8888]/[0.6]"
             onClick={mobileMenuToggle}
           >
             {mobileMenu ? (
@@ -60,11 +60,15 @@ const Header = () => {
             src={ytlogo}
             alt="Youtube"
           />
-          <img className="hidden dark:block h-8" src={ytlogo2} alt="Youtube" />
-          <img className="h-full md:hidden" src={logo} alt="Youtube" />
+          <img
+            className=" hidden dark:md:block h-8"
+            src={ytlogo2}
+            alt="Youtube"
+          />
+          <img className="h-full md:hidden mr-6" src={logo} alt="Youtube" />
         </Link>
       </div>
-      <div className="group flex items-center my-1">
+      <div className="group flex items-center my-1 mr-4">
         <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border border-[#888888] rounded-l-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0">
           <div className="w-10 items-center justify-center hidden group-focus-within:md:flex">
             <IoIosSearch className="text-black dark:text-white text-xl" />
@@ -94,8 +98,11 @@ const Header = () => {
             <FiBell className="text-black dark:text-white text-xl cursor-pointer" />
           </div>
         </div>
-        <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-          <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" />
+        <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4 mx-1">
+          <img
+            src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
