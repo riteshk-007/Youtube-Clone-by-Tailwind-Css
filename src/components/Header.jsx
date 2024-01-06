@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import ytlogo from "/logo.png";
-import ytlogo2 from "/logo2.png";
 import logo from "/youtube.png";
 
 import { SlMenu } from "react-icons/sl";
@@ -54,21 +53,17 @@ const Header = () => {
             )}
           </div>
         )}
-        <Link to="/" className="flex h-5 items-center">
+        <Link to="/" className="flex h-5 items-center mt-4">
           <img
             className="hidden dark:hidden md:block h-8"
             src={ytlogo}
             alt="Youtube"
           />
-          <img
-            className=" hidden dark:md:block h-8"
-            src={ytlogo2}
-            alt="Youtube"
-          />
+
           <img className="h-full md:hidden mr-6" src={logo} alt="Youtube" />
         </Link>
       </div>
-      <div className="group flex items-center my-1 mr-4">
+      <div className="group flex items-center my-1 mr-7">
         <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border border-[#888888] rounded-l-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0">
           <div className="w-10 items-center justify-center hidden group-focus-within:md:flex">
             <IoIosSearch className="text-black dark:text-white text-xl" />
@@ -100,7 +95,7 @@ const Header = () => {
         </div>
         <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4 mx-1">
           <img
-            src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg"
+            src="https://xsgames.co/randomusers/assets/avatars/male/67.jpg"
             className="w-full h-full object-cover"
           />
         </div>

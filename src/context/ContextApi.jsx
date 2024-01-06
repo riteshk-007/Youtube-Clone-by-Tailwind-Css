@@ -4,7 +4,7 @@ import { fetchDataFromApi } from "../utils/Api";
 
 export const Context = createContext();
 
-export const AppContext = (props) => {
+export const AppContext = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
   const [selectcategories, setSelectCategories] = useState("New");
@@ -34,7 +34,7 @@ export const AppContext = (props) => {
         setMobileMenu,
       }}
     >
-      {props.children}
+      {children}
     </Context.Provider>
   );
 };
